@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AviNow</title>
+    <!-- Bulma.io, 'CSS framework', 2016. [Online] Available: https://bulma.io/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome.com, 'Icon library', 2012. [Online] Available: https://fontawesome.com/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <!-- aldi.github.io/bulma-social/, 'Social Buttons and Colors for Bulma'. [Online] Available: https://aldi.github.io/bulma-social/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
+    <!-- bulma-carousel.onrender.com, 'bulma.io Carousel/Slider component'. [Online] Available: https://bulma-carousel.onrender.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="box navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="assets/images/logo.jpeg" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" id="burger" aria-label="menu" aria-expanded="false"
+                onclick="toggleBurger()">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div id="login-buttons" class="buttons">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main-content columns is-fullheight">
+        <div class="container column is-8 pr-0">
+
+            <!-- tab menu -->
+            <div class="tabs is-boxed is-fullwidth">
+                <ul>
+                    <li class="is-active">
+                        <a href="index.html">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="articles.html">
+                            <span>Articles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events.html">
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subscribe.html">
+                            <span>Subscribe</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- content -->
+            <div class="container">
+                <!-- Start Carousel -->
+                <div class="carousel">
+                    <a href="articles.html#article-1">
+                        <div class="card is-shadowless">
+                            <div class="card-image">
+                                <figure class="image is-16by9  is-covered">
+                                    <img src="https://cdn.24.co.za/files/Cms/General/d/10142/92c9999efa01475d8ab1202ee826d7a4.jpg"
+                                        alt="Main story image. Aviation watchdog extends suspension of Lufthansa Technik's licence ', audits SAAT after Comair 'incidents'">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title">
+                                    Aviation watchdog extends suspension of Lufthansa Technik's licence ', audits SAAT
+                                    after Comair 'incidents'
+                                </p>
+                                <p class="subtitle">
+                                    Carin Smith
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="articles.html#article-2">
+                        <div class="card is-shadowless">
+                            <div class="card-image">
+                                <figure class="image is-16by9  is-covered">
+                                    <img src="https://cdn.24.co.za/files/Cms/General/d/966/1bb13829548b41e39c926e9c983ffb8b.jpg"
+                                        alt="Main story image. Days after taking to the skies again, Comair looks for 'quality assurance specialist'">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title">
+                                    Days after taking to the skies again, Comair looks for 'quality assurance
+                                    specialist'
+                                </p>
+                                <p class="subtitle">
+                                    Carin Smith
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="articles.html#article-3">
+                        <div class="card is-shadowless">
+                            <div class="card-image">
+                                <figure class="image is-16by9  is-covered">
+                                    <img src="https://cdn.24.co.za/files/Cms/General/d/212/60e6beaaf6904512ae3c6414ce9d71a4.jpg"
+                                        alt="Main story image. Grounding of Comair has nothing to do with us, says Lufthansa Technik">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <p class="title">
+                                    Grounding of Comair has nothing to do with us, says Lufthansa Technik
+                                </p>
+                                <p class="subtitle">
+                                    Carin Smith
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- End Carousel -->
+            </div>
+
+        </div>
+
+        <!-- sidebar -->
+        <!-- hide on mobile -->
+        <aside class="box column is-4 is-narrow-mobile is-fullheight section is-hidden-mobile" style="z-index: 1;">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Uitenhage Wings and Wheels
+                    </p>
+                </header>
+                <div class="card-content">
+                    <time datetime="2022-4-2">April 2, 2022</time>
+                </div>
+                <footer class="card-footer">
+                    <a href="events.html#event-1" class="card-footer-item">View Event</a>
+                </footer>
+            </div>
+
+            <div class="card mt-4">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Sling Aircraft fly-away
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <time datetime="2022-4-8">April 8, 2022 - April 10, 2022</time>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="events.html#event-2" class="card-footer-item">View Event</a>
+                </footer>
+            </div>
+
+            <div class="card mt-4">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Steady Climb fly-in
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <time datetime="2022-4-9">April 9, 2022</time>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="events.html#event-3" class="card-footer-item">View Event</a>
+                </footer>
+            </div>
+
+            <div class="card mt-4">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        SAC KwaZulu Natal Regionals
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <time datetime="2022-4-9">April 9, 2022 @ 12:20 pm - April 10, 2022 @ 1:20 pm</time>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="events.html#event-4" class="card-footer-item">View Event</a>
+                </footer>
+            </div>
+
+        </aside>
+
+    </section>
+
+    <footer class="footer">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <a href="https://www.facebook.com/" class="button is-medium is-facebook">
+                    <span class="icon">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </span>
+                </a>
+                <a href="https://twitter.com/" class="button is-medium is-twitter">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                <a href="https://www.linkedin.com/" class="button is-medium is-linkedin">
+                    <span class="icon">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p>Contact Us</p>
+                    <address>
+                        <p>(+27) 00 000 0000</p>
+                    </address>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p>Address</p>
+                    <address>
+                        <p>2335 Oranje St Bethlehem</p>
+                        <p>Free State</p>
+                        <p>9704</p>
+                    </address>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <a href="report.html" class="link">Report</a>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+<!-- bulma-carousel.onrender.com, 'bulma.io Carousel/Slider component'. [Online] Available: https://bulma-carousel.onrender.com/ -->
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+    const toggleBurger = () => {
+        // first toggle items
+        let hidden = document.getElementById("navbarMenu").getElementsByClassName("togglehide");
+        for (let i = 0; i < hidden.length; i++) {
+            hidden[i].classList.toggle('is-hidden');
+        }
+        // then the menus
+        let burgerIcon = document.getElementById('burger');
+        let dropMenu = document.getElementById('navbarMenu');
+        burgerIcon.classList.toggle('is-active');
+        dropMenu.classList.toggle('is-active');
+    };
+
+    function init_carousel() {
+        let carousel_play = true;
+        options = {
+            slidesToScroll: 1,
+            slidesToShow: 1,
+            infinite: true,
+            navigationKeys: false,
+            autoplay: true
+        }
+        const carousel = bulmaCarousel.attach('.carousel', options)[0];
+        // attatch button event listners
+        document.addEventListener('keydown', event => {
+            const e = event || window.event;
+            if (e.keyCode === 39) { // right arrow
+                carousel.next();
+            } else if (e.keyCode === 37) { // left arrow
+                carousel.previous();
+            } else if (e.keyCode === 32) { // space
+                if (carousel_play) {
+                    carousel.stop();
+                    carousel_play = false;
+                } else {
+                    carousel.start();
+                    carousel_play = true;
+                }
+            }
+        });
+    }
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        init_carousel();
+        let url = new URL(window.location.href);
+
+        // refactor relevant links to include url params
+        if (url.searchParams.has('first-name')){
+            let links = document.querySelectorAll("a[href]");
+            Array.from(links).forEach(l => {
+                if (l.href.includes("html")) {
+                    let new_url = new URL(l.href);
+                    new_url.searchParams.set('first-name', url.searchParams.get('first-name'));
+                    l.href = new_url.href;
+                }
+            });
+        }
+
+        // login system
+        const buttons = document.getElementById('login-buttons');
+
+        if (url.searchParams.has('first-name')) {
+            const name = url.searchParams.get('first-name');
+
+            const a_name = document.createElement("a");
+            a_name.classList.add("button");
+            a_name.appendChild(document.createTextNode(name));
+            const a_logout = document.createElement("a");
+            a_logout.classList.add("button", "is-info");
+            a_logout.appendChild(document.createTextNode("Log out"));
+            url.searchParams.delete('first-name');
+            a_logout.href = url;
+            buttons.appendChild(a_name);
+            buttons.appendChild(a_logout);
+        } else {
+            const a = document.createElement("a");
+            a.classList.add("button", "is-light");
+            a.appendChild(document.createTextNode('Log in'));
+            a.href = 'login.html';
+            buttons.appendChild(a);
+        }
+    });
+</script>
+
+</html>

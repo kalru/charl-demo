@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AviNow</title>
+    <!-- Bulma.io, 'CSS framework',2016. [Online] Available: https://bulma.io/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome.com, 'Icon library', 2012. [Online] Available: https://fontawesome.com/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <!-- aldi.github.io/bulma-social/, 'Social Buttons and Colors for Bulma'. [Online] Available: https://aldi.github.io/bulma-social/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
+    <!-- bulma-carousel.onrender.com, 'bulma.io Carousel/Slider component'. [Online] Available: https://bulma-carousel.onrender.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="box navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="assets/images/logo.jpeg" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" id="burger" aria-label="menu" aria-expanded="false"
+                onclick="toggleBurger()">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div id="login-buttons" class="buttons">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main-content columns is-fullheight">
+        <!-- content -->
+        <div class="container column is-8">
+
+            <div class="tabs is-boxed is-fullwidth">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="articles.html">
+                            <span>Articles</span>
+                        </a>
+                    </li>
+                    <li class="is-active">
+                        <a href="events.html">
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="subscribe.html">
+                            <span>Subscribe</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tile is-ancestor">
+                <div class="tile is-parent is-vertical is-6">
+                    <article class="tile is-child notification">
+                        <p id="event-1" class="title">Uitenhage Wings and Wheels</p>
+                        <table class="table is-hoverable">
+                            <tbody>
+                                <tr>
+                                    <th>When</th>
+                                    <td>April 2, 2022</td>
+                                </tr>
+                                <tr>
+                                    <th>Where</th>
+                                    <td>
+                                        <address>
+                                            Uitenhage Aero Club
+                                            Kwa Nobuhle
+                                            Cape Road Industrial, Kwa Nobuhle
+                                            South Africa
+                                        </address>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Contact</th>
+                                    <td>
+                                        <address>
+                                            Lourens Kruger
+                                            <span class="icon-text">
+                                                <span class="icon">
+                                                    <a href="mailto:lmk@telkomsa.net"><i class="fas fa-envelope"></i></a>
+                                                </span>
+                                                <a href="mailto:lmk@telkomsa.net">Email</a>
+                                            </span>
+                                        </address>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><i>Source: <a href="https://www.aviationcentral.co.za/event/uitenhage-wings-and-wheels/?instance_id=215">Aviation Central</a>.</i></p>
+                    </article>
+                    <article class="tile is-child notification">
+                        <p id="event-2" class="title">Sling Aircraft fly-away</p>
+                        <table class="table is-hoverable">
+                            <tbody>
+                                <tr>
+                                    <th>When</th>
+                                    <td>April 8, 2022 - April 10, 2022</td>
+                                </tr>
+                                <tr>
+                                    <th>Where</th>
+                                    <td>
+                                        <address>
+                                            Tankwa Tented Camp
+                                            R355
+                                            Calvinia, 8193
+                                            South Africa
+                                        </address>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Contact</th>
+                                    <td>
+                                        <address>
+                                            Shanelle McKechnie
+                                            <span class="icon-text">
+                                                <span class="icon">
+                                                    <a href="mailto:shanelle@slingaircraft.com"><i class="fas fa-envelope"></i></a>
+                                                </span>
+                                                <a href="mailto:shanelle@slingaircraft.com">Email</a>
+                                            </span>
+                                        </address>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><i>Source: <a href="https://www.aviationcentral.co.za/event/sling-aircraft-fly-away/?instance_id=216">Aviation Central</a>.</i></p>
+                    </article>
+                </div>
+                <div class="tile is-parent is-vertical is-6">
+                    <article class="tile is-child notification">
+                        <p id="event-3" class="title">Steady Climb fly-in</p>
+                        <table class="table is-hoverable">
+                            <tbody>
+                                <tr>
+                                    <th>When</th>
+                                    <td>April 9, 2022</td>
+                                </tr>
+                                <tr>
+                                    <th>Where</th>
+                                    <td>
+                                        <address>
+                                            Rhino Park airfield
+                                            Rhino Park Airfield
+                                            Bronkhorstspruit, South Africa
+                                            South Africa
+                                        </address>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Contact</th>
+                                    <td>
+                                        <address>
+                                            David Le Roux
+                                            <span class="icon-text">
+                                                <span class="icon">
+                                                    <a href="mailto:david@pilotinsure.co.za"><i class="fas fa-envelope"></i></a>
+                                                </span>
+                                                <a href="mailto:david@pilotinsure.co.za">Email</a>
+                                            </span>
+                                        </address>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><i>Source: <a href="https://www.aviationcentral.co.za/event/steady-climb-fly-in/?instance_id=217">Aviation Central</a>.</i></p>
+                    </article>
+                    <article class="tile is-child notification">
+                        <p id="event-4" class="title">SAC KwaZulu Natal Regionals</p>
+                        <table class="table is-hoverable">
+                            <tbody>
+                                <tr>
+                                    <th>When</th>
+                                    <td>April 9, 2022 @ 12:20 pm - April 10, 2022 @ 1:20 pm</td>
+                                </tr>
+                                <tr>
+                                    <th>Where</th>
+                                    <td>
+                                        <address>
+                                            Ladysmith airfield
+                                            Ladysmith Airport FALY
+                                            S28.5815749, E29.7448682, Ladysmith, 3370
+                                            South Africa
+                                        </address>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Contact</th>
+                                    <td>
+                                        <address>
+                                            Annie Boon
+                                            <span class="icon-text">
+                                                <span class="icon">
+                                                    <a href="mailto:chunge@mweb.co.za"><i class="fas fa-envelope"></i></a>
+                                                </span>
+                                                <a href="mailto:chunge@mweb.co.za">Email</a>
+                                            </span>
+                                        </address>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><i>Source: <a href="https://www.aviationcentral.co.za/event/sac-kwazulu-natal-regionals/?instance_id=218">Aviation Central</a>.</i></p>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- sidebar -->
+        <!-- hide on mobile -->
+        <aside class="box column is-4 is-narrow-mobile is-fullheight section is-hidden-mobile" style="z-index: 1;">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Aviation watchdog extends suspension of Lufthansa Technik's licence ', audits SAAT after Comair 'incidents'
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <p>Lufthansa Technik Maintenance International's maintenance licence has been suspended "indefinitely" in SA following an unscheduled audit by the SA Civil Aviation Authority...</p>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="articles.html#article-1" class="card-footer-item">View Article</a>
+                </footer>
+            </div>
+
+            <div class="card mt-4">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Days after taking to the skies again, Comair looks for 'quality assurance specialist'
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <p>Comair is looking for a quality assurance (QA) specialist to be based in Johannesburg...</p>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="articles.html#article-2" class="card-footer-item">View Article</a>
+                </footer>
+            </div>
+
+            <div class="card mt-4">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Grounding of Comair has nothing to do with us, says Lufthansa Technik
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <p>The findings made by the SA Civil Aviation Authority during an audit of Lufthansa Technik are not directly related to recent technical problems on Comair-operated flights, according to the company...</p>
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <a href="articles.html#article-3" class="card-footer-item">View Article</a>
+                </footer>
+            </div>
+
+        </aside>
+
+    </section>
+
+    <footer class="footer">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <a href="https://www.facebook.com/" class="button is-medium is-facebook">
+                    <span class="icon">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </span>
+                </a>
+                <a href="https://twitter.com/" class="button is-medium is-twitter">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                <a href="https://www.linkedin.com/" class="button is-medium is-linkedin">
+                    <span class="icon">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p>Contact Us</p>
+                    <address>
+                        <p>(+27) 00 000 0000</p>
+                    </address>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p>Address</p>
+                    <address>
+                        <p>2335 Oranje St Bethlehem</p>
+                        <p>Free State</p>
+                        <p>9704</p>
+                    </address>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+
+<!-- bulma-carousel.onrender.com, 'bulma.io Carousel/Slider component'. [Online] Available: https://bulma-carousel.onrender.com/ -->
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+    const toggleBurger = () => {
+        // first toggle items
+        let hidden = document.getElementById("navbarMenu").getElementsByClassName("togglehide");
+        for (let i = 0; i < hidden.length; i++) {
+            hidden[i].classList.toggle('is-hidden');
+        }
+        // then the menus
+        let burgerIcon = document.getElementById('burger');
+        let dropMenu = document.getElementById('navbarMenu');
+        burgerIcon.classList.toggle('is-active');
+        dropMenu.classList.toggle('is-active');
+    };
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        let url = new URL(window.location.href);
+
+        // refactor relevant links to include url params
+        if (url.searchParams.has('first-name')){
+            let links = document.querySelectorAll("a[href]");
+            Array.from(links).forEach(l => {
+                if (l.href.includes("html")) {
+                    let new_url = new URL(l.href);
+                    new_url.searchParams.set('first-name', url.searchParams.get('first-name'));
+                    l.href = new_url.href;
+                }
+            });
+        }
+
+        // login system
+        const buttons = document.getElementById('login-buttons');
+
+        if (url.searchParams.has('first-name')) {
+            const name = url.searchParams.get('first-name');
+
+            const a_name = document.createElement("a");
+            a_name.classList.add("button");
+            a_name.appendChild(document.createTextNode(name));
+            const a_logout = document.createElement("a");
+            a_logout.classList.add("button", "is-info");
+            a_logout.appendChild(document.createTextNode("Log out"));
+            url.searchParams.delete('first-name');
+            a_logout.href = url;
+            buttons.appendChild(a_name);
+            buttons.appendChild(a_logout);
+        } else {
+            const a = document.createElement("a");
+            a.classList.add("button", "is-light");
+            a.appendChild(document.createTextNode('Log in'));
+            a.href = 'login.html';
+            buttons.appendChild(a);
+        }
+    });
+</script>
+
+</html>

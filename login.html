@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AviNow</title>
+    <!-- Bulma.io, 'CSS framework',2016. [Online] Available: https://bulma.io/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome.com, 'Icon library', 2012. [Online] Available: https://fontawesome.com/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <!-- aldi.github.io/bulma-social/, 'Social Buttons and Colors for Bulma'. [Online] Available: https://aldi.github.io/bulma-social/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
+    <!-- bulma-carousel.onrender.com, 'bulma.io Carousel/Slider component'. [Online] Available: https://bulma-carousel.onrender.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="box navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="assets/images/logo.jpeg" height="28">
+            </a>
+
+        </div>
+
+    </nav>
+
+    <section class="main-content columns is-fullheight">
+        <!-- content -->
+        <div class="container">
+
+            <section class="hero">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="columns is-centered">
+                            <div class="column is-7-tablet is-6-desktop is-6-widescreen">
+                                <!-- use own redirect to index -->
+                                <form method="post" class="box" onsubmit="event.preventDefault();">
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Email</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded has-icons-left">
+                                                    <input class="input" type="email" placeholder="bobsmith@gmail.com"
+                                                        required="" name="email" maxlength="254" autocomplete="email" autofocus="">
+                                                    <span class="icon is-small is-left">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Password</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded has-icons-left">
+                                                    <input class="input" type="password" placeholder="*******"
+                                                        required="" name="password" autocomplete="current-password">
+                                                    <span class="icon is-small is-left">
+                                                        <i class="fa fa-lock"></i>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-grouped is-grouped-right">
+                                        <input id="submit" class="button is-link" type="submit" value="Log in" />
+                                    </div>
+                                    <div class="field is-grouped is-grouped-right">
+                                        <div class="content is-small">
+                                            <a href>Forgot password?</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <a href="https://www.facebook.com/" class="button is-medium is-facebook">
+                    <span class="icon">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </span>
+                </a>
+                <a href="https://twitter.com/" class="button is-medium is-twitter">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                <a href="https://www.linkedin.com/" class="button is-medium is-linkedin">
+                    <span class="icon">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p>Contact Us</p>
+                    <address>
+                        <p>(+27) 00 000 0000</p>
+                    </address>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p>Address</p>
+                    <address>
+                        <p>2335 Oranje St Bethlehem</p>
+                        <p>Free State</p>
+                        <p>9704</p>
+                    </address>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+
+<!-- bulma-carousel.onrender.com, 'bulma.io Carousel/Slider component'. [Online] Available: https://bulma-carousel.onrender.com/ -->
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+    const toggleBurger = () => {
+        // first toggle items
+        let hidden = document.getElementById("navbarMenu").getElementsByClassName("togglehide");
+        for (let i = 0; i < hidden.length; i++) {
+            hidden[i].classList.toggle('is-hidden');
+        }
+        // then the menus
+        let burgerIcon = document.getElementById('burger');
+        let dropMenu = document.getElementById('navbarMenu');
+        burgerIcon.classList.toggle('is-active');
+        dropMenu.classList.toggle('is-active');
+    };
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const submit = document.getElementById("submit");
+        const email = document.getElementsByName("email")[0];
+        const password = document.getElementsByName("password")[0];
+
+        submit.addEventListener('click', () => {
+            if(email.value && password){
+                let url = new URL(window.location.href);
+                url.href = url.href.replace("login", "index");
+                url.searchParams.set('first-name', email.value);
+                window.location.replace(url);
+            }
+        });
+    });
+</script>
+
+</html>

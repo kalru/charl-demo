@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AviNow</title>
+    <!-- Bulma.io, 'CSS framework',2016. [Online] Available: https://bulma.io/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+        integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- fontawesome.com, 'Icon library', 2012. [Online] Available: https://fontawesome.com/ -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <!-- aldi.github.io/bulma-social/, 'Social Buttons and Colors for Bulma'. [Online] Available: https://aldi.github.io/bulma-social/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css" />
+    <!-- bulma-carousel.onrender.com, 'bulma.io Carousel/Slider component'. [Online] Available: https://bulma-carousel.onrender.com/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="box navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="assets/images/logo.jpeg" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" id="burger" aria-label="menu" aria-expanded="false"
+                onclick="toggleBurger()">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div id="login-buttons" class="buttons">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main-content columns is-fullheight">
+
+        <div class="container">
+            <!-- tab menu -->
+            <div class="tabs is-boxed is-fullwidth">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="articles.html">
+                            <span>Articles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="events.html">
+                            <span>Events</span>
+                        </a>
+                    </li>
+                    <li class="is-active">
+                        <a href="subscribe.html">
+                            <span>Subscribe</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- content -->
+            <section class="hero">
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="columns is-centered">
+                            <div class="column is-7-tablet is-6-desktop is-6-widescreen">
+                                <form method="post" onsubmit="event.preventDefault();" class="box">
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Fist Name</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded has-icons-left">
+                                                    <input class="input" type="text" placeholder="Name" required=""
+                                                        name="first_name" autocapitalize="none" maxlength="30"
+                                                        autofocus="">
+                                                    <span class="icon is-small is-left">
+                                                        <i class="fas fa-user"></i>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Last Name</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded has-icons-left">
+                                                    <input class="input" type="text" placeholder="Surname" required=""
+                                                        name="last_name" autocapitalize="none" maxlength="30">
+                                                    <span class="icon is-small is-left">
+                                                        <i class="fas fa-user"></i>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-horizontal">
+                                        <div class="field-label is-normal">
+                                            <label class="label">Email</label>
+                                        </div>
+                                        <div class="field-body">
+                                            <div class="field">
+                                                <p class="control is-expanded has-icons-left">
+                                                    <input class="input" type="email" placeholder="bobsmith@gmail.com"
+                                                        required="" name="email" maxlength="254" autocomplete="email">
+                                                    <span class="icon is-small is-left">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="field is-grouped is-grouped-right">
+                                        <input id="register" class="button is-link" type="submit" value="Register" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <a href="https://www.facebook.com/" class="button is-medium is-facebook">
+                    <span class="icon">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </span>
+                </a>
+                <a href="https://twitter.com/" class="button is-medium is-twitter">
+                    <span class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </span>
+                </a>
+                <a href="https://www.linkedin.com/" class="button is-medium is-linkedin">
+                    <span class="icon">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p>Contact Us</p>
+                    <address>
+                        <p>(+27) 00 000 0000</p>
+                    </address>
+                </div>
+            </div>
+            <div class="level-item has-text-centered">
+                <div>
+                    <p>Address</p>
+                    <address>
+                        <p>2335 Oranje St Bethlehem</p>
+                        <p>Free State</p>
+                        <p>9704</p>
+                    </address>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+</body>
+
+<!-- bulma-carousel.onrender.com, 'bulma.io Carousel/Slider component'. [Online] Available: https://bulma-carousel.onrender.com/ -->
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script>
+    const toggleBurger = () => {
+        // first toggle items
+        let hidden = document.getElementById("navbarMenu").getElementsByClassName("togglehide");
+        for (let i = 0; i < hidden.length; i++) {
+            hidden[i].classList.toggle('is-hidden');
+        }
+        // then the menus
+        let burgerIcon = document.getElementById('burger');
+        let dropMenu = document.getElementById('navbarMenu');
+        burgerIcon.classList.toggle('is-active');
+        dropMenu.classList.toggle('is-active');
+    };
+
+    window.addEventListener('DOMContentLoaded', (event) => {
+        let url = new URL(window.location.href);
+
+        // refactor relevant links to include url params
+        if (url.searchParams.has('first-name')){
+            let links = document.querySelectorAll("a[href]");
+            Array.from(links).forEach(l => {
+                if (l.href.includes("html")) {
+                    let new_url = new URL(l.href);
+                    new_url.searchParams.set('first-name', url.searchParams.get('first-name'));
+                    l.href = new_url.href;
+                }
+            });
+        }
+
+        // login system
+        const buttons = document.getElementById('login-buttons');
+
+        if (url.searchParams.has('first-name')) {
+            const name = url.searchParams.get('first-name');
+
+            const a_name = document.createElement("a");
+            a_name.classList.add("button");
+            a_name.appendChild(document.createTextNode(name));
+            const a_logout = document.createElement("a");
+            a_logout.classList.add("button", "is-info");
+            a_logout.appendChild(document.createTextNode("Log out"));
+            url.searchParams.delete('first-name');
+            a_logout.href = url;
+            buttons.appendChild(a_name);
+            buttons.appendChild(a_logout);
+        } else {
+            const a = document.createElement("a");
+            a.classList.add("button", "is-light");
+            a.appendChild(document.createTextNode('Log in'));
+            a.href = 'login.html';
+            buttons.appendChild(a);
+        }
+
+        const register = document.getElementById("register");
+        const email = document.getElementsByName("email")[0];
+        const ln = document.getElementsByName("last_name")[0];
+        const fn = document.getElementsByName("first_name")[0];
+        register.addEventListener('click', () => {
+            if(email.value && ln.value && fn.value){
+                let url = new URL(window.location.href);
+                url.href = url.href.replace("subscribe", "index");
+                window.location.replace(url);
+            }
+        });
+    });
+</script>
+
+</html>
